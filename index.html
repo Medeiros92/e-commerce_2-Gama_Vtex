@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Flexbox Responsive</title>
+</head>
+<body>
+    <!--=====CONTAINER=====-->
+    <div class="container">
+      <!--=====NAV=====-->
+        <nav>
+            <p class="nome-logo"><a href="#">Nome Empresa</a></p>
+            <ul id="menu-nav">
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#quemsomos">Quem somos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#"><i class='bx bx-search bx-xs'></i></a></li>
+                <li><a href="./pages/carrinho.html"><i id="sacola" class='bx bx-shopping-bag bx-xs'></i><p class="count_item">0</p></a></li>
+            </ul>
+            <div id="grid-mm" class="grid">
+                <i class='bx bxs-grid-alt bx-sm'></i>
+            </div>
+        </nav>
+        <!--=====CAROUSEL=====-->
+        <main>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./images/ftc1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/ftc2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/ftc3.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </main>
+        <!--=====GENERO DE ROUPA=====-->
+        <div id="content1" class="content_img">Masculino
+            <a href="#"><img src="./images/ft1.jpg" alt="roupas masculino"></a>
+        </div>
+        <div id="content2" class="content_img">Feminino
+            <a href="#"><img src="./images/ft2.jpg" alt="roupas feminino"></a>
+        </div>
+        <div id="content3" class="content_img">Infantil
+            <a href="#"><img src="./images/ft3.jpg" alt="roupas infantil"></a>
+        </div>
+        <!--=====PRODUTOS=====-->
+        <div id="sidebar">
+          <div class="card-prod">
+            <div class="imgBx">
+                <img class="img-polo" src="./images/polo-preta-frente.png">
+            </div>
+            <div id="polos" class="contextBx">
+                <h3 class="nome-pod">Polo Black</h3>
+                <h2 class="price">R$85<small>.22</small></h2>
+                <button id="polo" class="buy" onclick="addsacola(), getid(this.id)">Buy now</button>
+            </div>
+        </div>
+        <div class="card-prod">
+          <div class="imgBx">
+              <img class="img-vestido" src="./images/vestido-feminio.png">
+          </div>
+          <div id="vestidos" class="contextBx">
+              <h3 class="nome-pod">Vestido Brix</h3>
+              <h2 class="price">R$235<small>.22</small></h2>
+              <button id="vestido" class="buy" onclick="addsacola(), getid(this.id)">Buy now</button>
+          </div>
+      </div>
+      <div class="card-prod">
+        <div class="imgBx">
+            <img class="img-short-inf-masc" src="./images/short-masc-infantil.png">
+        </div>
+        <div id="shorts" class="contextBx">
+            <h3 class="nome-pod">Bermuda Downton Inf.</h3>
+            <h2 class="price">R$60<small>.22</small></h2>
+            <button id="short" class="buy" onclick="addsacola(), getid(this.id)">Buy now</button>
+        </div>
+    </div>
+        </div>
+        <!--=====FOOTER=====-->
+        <footer>Footer</footer>
+        <div id="blockpromo" class="block-promo">
+          <div class="promo">
+              <i id="closepromo" class='bx close-promo bx-x bx-md'></i>
+              <div class="txt-promo">
+                  <p class="titulo-promo">50% Off</p>
+                  <p class="subtitulo-promo">Em toda a loja</p>
+                  <div class="input-promo">
+                      <p class="txt-inscreva">Inscreva-se para receber grandes ofertas!</p>
+                      <div class="input-email-promo-bt">
+                          <input id="inputemailpromo" class="input-email-promo" type="text" placeholder="Email">
+                          <button id="btpromo" class="bt-promo" onclick="submitMail()"><p class="txt-bt-promo">Quero Ofertas!</p></button>
+                      </div>
+                  </div>
+              </div>
+              <divi class="img-promo"><img src="./images/promo-img.png" alt="img-promo"></divi>
+          </div>
+      </div>
+    </div>
+    
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

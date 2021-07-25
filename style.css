@@ -389,12 +389,64 @@ img{
 
 /*=====FOOTER=====*/
 footer{
-    background-color: #9CA6FF;
+    background-color: var(--black);
     grid-area: footer;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
     color: var(--grey2);
 }
+
+.container-footer{
+    display: flex;
+    justify-content: center;
+}
+
+.list-footer{
+    font-size: large;
+    display: flex;
+    width: 1000px;
+    justify-content: space-around;
+    color: var(--white);
+}
+
+.list-principal{
+    display: flex;
+    flex-direction: column;
+}
+
+.list-sub{
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+}
+
+.list-sub li{
+    margin-top: 5px;
+}
+
+.list-sub li a{
+text-decoration: none;
+color: var(--white);
+}
+
+.inp-email-footer{
+    border: none;
+    border-radius: 3px;
+    height: 25px;
+}
+
+.sub-email-footer{
+    background-color: rgb(101, 201, 101);
+    border: none;
+    color: var(--black);
+    border-radius: 3px;
+    height: 25px;
+}
+
+
+
+
 
 /*=====HOVER=====*/
 a:hover{

@@ -18,6 +18,7 @@ function showPromodiv(){
 } 
     setTimeout("showPromodiv()", 4000);
 
+    //Email Promocional
 const btsubpromo = document.getElementById("btpromo");
  
 
@@ -38,6 +39,25 @@ btsubpromo.addEventListener("click", function(){
     //Limpa campos ao enviar o formulario
     inputemail = document.getElementById('inputemailpromo').value='';
 });
+
+//Email Novidades Footer
+function submitMail(){
+    const inputemailfooter = document.getElementById("inpemailfooter");
+    const emailf = inputemailfooter.value;
+    if(emailf !== "" ){
+
+            
+        localStorage.setItem('EmailNewsLetter', emailf);
+       
+  
+        alert('Inscrição Realizada com Sucesso! Em Breve Você Rebecerá Nossas Novidades em Seu Endereço de Email.');
+    }else {
+     alert('PREENCHA O CAMPO CORRETAMENTE');
+    }
+
+    //Limpa campos ao enviar o formulario
+    inputemailfooter = document.getElementById('inpemailfooter"').value='';
+}
 
 //=====CLOSE/OPEN MENU MOBILE=====
 const closeopenmenumob = document.getElementById("grid-mm");
